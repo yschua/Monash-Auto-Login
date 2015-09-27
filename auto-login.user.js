@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Monash Auto Login
 // @namespace    https://github.com/yschua/monash-auto-login
-// @version      0.4
+// @version      0.5
 // @description  Save login credentials and automatic login
 // @author       yschua
 // @include      https://*.monash.*
@@ -41,7 +41,11 @@ if (main || wes) {
       document.getElementById(passwordInput).value = decrypt("password");
       //GM_log(att);
       GM_setValue("attempts", ++att);
-      Login.submitLoginRequest();
+      if (wes) {
+        document.getElementsByTagName('input')[6].click();
+      } else {
+        Login.submitLoginRequest();
+      }
     }
   }
 } else {
@@ -73,7 +77,7 @@ if (main) {
 
 function saveLoginTemp() {
   var username = document.getElementById(userNameInput).value;
-  username = username.replace(/Monash\/\//, "")
+  username = username.replace(/Monash\\/, "")
   var password = document.getElementById(passwordInput).value;
   generateKey(username + password);
   encryptAndSave("usernameTmp", username);
