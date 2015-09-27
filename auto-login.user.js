@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Monash Auto Login
 // @namespace    https://github.com/yschua/monash-auto-login
-// @version      0.5
+// @version      0.6
 // @description  Save login credentials and automatic login
 // @author       yschua
 // @include      https://*.monash.*
@@ -44,7 +44,7 @@ if (main || wes) {
       if (wes) {
         document.getElementsByTagName('input')[6].click();
       } else {
-        Login.submitLoginRequest();
+        unsafeWindow.Login.submitLoginRequest();
       }
     }
   }
