@@ -7,7 +7,7 @@
 // @include      https://*.monash.*
 // @grant        GM_setValue
 // @grant        GM_getValue
-// @grant        GM_delteValue
+// @grant        GM_deleteValue
 // @grant        GM_listValues
 // @grant        GM_registerMenuCommand
 // @require      http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/pbkdf2.js
