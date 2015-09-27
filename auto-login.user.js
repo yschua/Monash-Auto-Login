@@ -23,7 +23,7 @@ if (main || wes) {
     deleteAll();
   }
 
-  if (GM_listValues()[0]) {
+  if (GM_listValues()[1]) {
     if (!GM_getValue("attempts")) {
       GM_setValue("attempts", 0);
     }
@@ -40,7 +40,9 @@ if (main || wes) {
     }
   }
 } else {
-  GM_setValue("attempts", 0);
+  if (GM_getValue("attempts")) {
+    GM_deleteValue("attempts");
+  }
   if (GM_getValue("usernameTmp")) {
     if (confirm("Do you want to save your login details?")) {
       saveLogin();
