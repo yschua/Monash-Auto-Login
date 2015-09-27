@@ -7,6 +7,8 @@
 // @include      https://*.monash.*
 // @require      http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/pbkdf2.js
 // @require      http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js
+// @updateURL    https://raw.githubusercontent.com/yschua/monash-auto-login/master/auto-login.user.js
+// @downloadURL  https://raw.githubusercontent.com/yschua/monash-auto-login/master/auto-login.user.js
 // ==/UserScript==
 
 GM_registerMenuCommand("Delete Login", deleteAll);
