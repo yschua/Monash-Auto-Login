@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Monash Auto Login
 // @namespace    https://github.com/yschua/monash-auto-login
-// @version      0.2
+// @version      0.3
 // @description  Save login credentials and automatic login
 // @author       yschua
 // @include      https://*.monash.*
