@@ -1,10 +1,15 @@
 // ==UserScript==
 // @name         Monash Auto Login
 // @namespace    https://github.com/yschua/monash-auto-login
-// @version      0.1
+// @version      0.2
 // @description  Save login credentials and automatic login
 // @author       yschua
 // @include      https://*.monash.*
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_delteValue
+// @grant        GM_listValues
+// @grant        GM_registerMenuCommand
 // @require      http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/pbkdf2.js
 // @require      http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js
 // @updateURL    https://raw.githubusercontent.com/yschua/monash-auto-login/master/auto-login.user.js
@@ -34,7 +39,7 @@ if (main || wes) {
     } else {
       document.getElementById(userNameInput).value = decrypt("username");
       document.getElementById(passwordInput).value = decrypt("password");
-      GM_log(att);
+      //GM_log(att);
       GM_setValue("attempts", ++att);
       Login.submitLoginRequest();
     }
